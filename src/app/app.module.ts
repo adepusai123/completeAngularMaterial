@@ -5,7 +5,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { EmployeesComponent } from './employees/employees.component';
 import { EmployeeComponent } from './employees/employee/employee.component';
-
+import { MaterialModule } from './material/material.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,7 +14,8 @@ import { EmployeeComponent } from './employees/employee/employee.component';
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
