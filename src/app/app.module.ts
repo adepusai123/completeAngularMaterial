@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { EmployeesComponent } from './employees/employees.component';
 import { EmployeeComponent } from './employees/employee/employee.component';
 import { MaterialModule } from './material/material.module';
+import { AppRoutingModule } from './app-routing.module';
+import { SidenavModule } from './modules/sidenav/sidenav.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -15,7 +17,9 @@ import { MaterialModule } from './material/material.module';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    SidenavModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
