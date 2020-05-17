@@ -1,5 +1,1 @@
-.active-link {
-    color:blue !important;
-    font-weight: bold !important;
-}
-
+.active-link { color: blue; font-weight: bold !important; border: none; } 

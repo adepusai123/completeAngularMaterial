@@ -5,6 +5,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
+import {OverlayModule} from '@angular/cdk/overlay';
 @NgModule({
   imports: [
     CommonModule,
@@ -12,7 +13,8 @@ import { MatListModule } from '@angular/material/list';
     MatSidenavModule,
     MatIconModule,
     MatButtonModule,
-    MatListModule
+    MatListModule,
+    OverlayModule
   ],
   declarations: [],
   exports: [
@@ -20,7 +22,8 @@ import { MatListModule } from '@angular/material/list';
     MatSidenavModule,
     MatIconModule,
     MatButtonModule,
-    MatListModule
+    MatListModule,
+    OverlayModule
   ]
 })
 export class MaterialModule { }
