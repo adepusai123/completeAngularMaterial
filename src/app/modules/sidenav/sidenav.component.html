@@ -1,11 +1,24 @@
 <mat-sidenav-container>
-  <mat-sidenav mode="side" opened=true>Sidenav content</mat-sidenav>
+  <mat-sidenav mode="side" opened=true #snav>
+    <mat-nav-list>
+      <mat-list-item>
+        <h4 matLine routerLink="/welcome" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}">Home</h4>
+      </mat-list-item>
+      <mat-list-item>
+        <h4 matLine routerLink="/books" routerLinkActive="active-link">Books</h4>
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar>
-      <button type="button" mat-icon-button aria-label="Toggle sidebar">
+      <button type="button" mat-icon-button aria-label="Toggle sidebar" (click)="snavToggle(snav)">
         <mat-icon>menu</mat-icon>
       </button>
+      <span fxFlex>
+        <a class="home-link" routerLink=".">{{ title }}</a>
+      </span>
     </mat-toolbar>
-    This is where all books should go.
+    <!-- This is where all books should go. -->
+    <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
