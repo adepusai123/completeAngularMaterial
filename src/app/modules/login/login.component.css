@@ -1,0 +1,19 @@
+.form-group {
+    width: 100%;
+    padding:5%;
+}
+.form-group > * {
+    width: 100%;
+}
+
+.radio-group {
+    /* margin-left: 0; */
+    width: 100%;
+}
+
+.radio-button {
+    padding-right: 5%;
+}
+.btn-group > .btn-cancel {
+    margin-right: 5%;
+}

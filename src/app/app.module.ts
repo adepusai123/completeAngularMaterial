@@ -8,18 +8,20 @@ import { EmployeeComponent } from './employees/employee/employee.component';
 import { MaterialModule } from './material/material.module';
 import { AppRoutingModule } from './app-routing.module';
 import { SidenavModule } from './modules/sidenav/sidenav.module';
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
     EmployeesComponent,
     EmployeeComponent
-  ],
+    ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
     SidenavModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
