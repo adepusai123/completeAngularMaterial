@@ -1,11 +1,8 @@
-<div class="container">
-  <mat-card class="login-card">
-    <mat-card-header>
-      <mat-card-title>Login</mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-      <app-login></app-login>
-    </mat-card-content>
-    <span> <a matLine routerLink="/books">Do you want to register?</a> </span>
-  </mat-card>
-</div>
+<mat-grid-list cols="2" rowHeight="2:1">
+  <mat-grid-tile>1
+  </mat-grid-tile>
+  <mat-divider [vertical]="true"></mat-divider>
+  <mat-grid-tile>
+    <app-login></app-login>
+  </mat-grid-tile>
+</mat-grid-list>
