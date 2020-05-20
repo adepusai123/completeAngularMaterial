@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
+import { EmployeeService } from 'src/app/shared/employee.service';
 // import { EmployeeService } from 'src/app/shared/employee.service';
 
 @Component({
@@ -10,7 +11,8 @@ import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
 export class LoginComponent implements OnInit {
   loginForm: FormGroup;
   genders = ['Male', 'Female'];
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder,
+    private es: EmployeeService) { }
   ngOnInit() {
     this.loginForm = this.fb.group({
       firstName: [''],
@@ -27,9 +29,9 @@ export class LoginComponent implements OnInit {
     const { value, valid } = this.loginForm
     if (valid) {
       console.log(value);
-      // this.empService.loginService(value).subscribe((res) => {
-      //   console.log(res);
-      // })
+      this.es.loginService(value).subscribe((res) => {
+        console.log(res);
+      })
     }
   }
 }
