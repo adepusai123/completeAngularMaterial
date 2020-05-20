@@ -1,8 +1,9 @@
-<mat-sidenav-container>
+<mat-sidenav-container class="side-nav-container">
   <mat-sidenav mode="over" opened=false #snav>
     <mat-nav-list>
       <mat-list-item>
-        <h4 matLine routerLink="/welcome" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}">Home</h4>
+        <h4 matLine routerLink="/welcome" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}">Home
+        </h4>
       </mat-list-item>
       <mat-list-item>
         <h4 matLine routerLink="/books" routerLinkActive="active-link">Books</h4>
@@ -19,6 +20,8 @@
       </span>
     </mat-toolbar>
     <!-- This is where all books should go. -->
-    <router-outlet></router-outlet>
+    <div class="main-container">
+      <router-outlet></router-outlet>
+    </div>
   </mat-sidenav-content>
 </mat-sidenav-container>
